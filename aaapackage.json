@@ -1,0 +1,17 @@
+{
+	"version":"0.0.0",
+	"private":true,
+	"name":"angular-test-demo",
+	"description":"ng project structure",
+	"license":"MIT",
+	"devDependencies":{
+		"http-server":"0.9.0",
+		"angular":"1.6.3",
+		"angular-route":"1.6.4"
+	},
+	"scripts":{
+		"postinstall":"",
+		"prestart":"npm install",
+		"start":"http-server -p 8000"
+	}
+}
