@@ -1,32 +1,42 @@
 <html ng-app="bookStoreApp">
+
 <head>
-	<meta charset="UTF-8">
-	<TITLE>BookStore</TITLE>
-
-	<link ref="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-	<script src="../node_modules/angular/angular.js"></script>
-	<script src="../node_modules/angular-route/angular-route.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers.js"></script>
-	<script src="js/directives.js"></script>
-	<script src="js/filters.js"></script>
-	<script src="js/services.js"></script>
+    <meta charset="UTF-8">
+    <TITLE>BookStore</TITLE>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
 </head>
-	<body >
 
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">mutual binding</div>
+        </div>
+        <div id="menu">
+            <ul class="nav nav-tabs">
+                <li><a href="#!/hello">hello</a></li>
+                <li><a href="#!/list">list</a></li>
+                <li><a href="#!/userInfo">userInfo</a></li>
+                <li><a href="#!/csstest">csstest</a></li>
+            </ul>
+            <br>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page {{page-class}}" ng-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-		<div id="menu"
-			style="background-color: #FFD700; height: 200px; float: left;">
-			<ul>
-				<li><a href="#!/hello">hello</a></li>
-				<li><a href="#!/list">expression</a></li>
-				<li><a href="#!/bookForm">bookForm</a></li>
-			</ul>
-			<br>
-		</div>
-
-		<div ng-view>
-		</div>
-	
-	</body>
 </html>

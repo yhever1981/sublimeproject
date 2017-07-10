@@ -1,0 +1,32 @@
+.text-red{
+	background-color: #ff0000;
+}
+
+.text-green{
+	background-color: #00ff00;
+}
+
+.error{
+	background-color: #ff0000;
+}
+
+.warning{
+	background-color: #0000ff;
+}
+
+.page{
+	bottom:0;
+	padding-top: 200px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width:100%;
+}
+
+.page h1{
+	font-size: 60px;
+}
+
+.page a {
+	margin-top: 50px;
+}

@@ -1,7 +1,7 @@
 
 
 var bookStoreApp = angular.module('bookStoreApp',[
-	'ngRoute','bookStoreCtrls','bookStoreDirectives','bookStoreFilters',
+	'ngRoute','ngAnimate','bookStoreCtrls','bookStoreDirectives','bookStoreFilters',
 	'bookStoreServices'
 	]);
 
@@ -12,9 +12,12 @@ bookStoreApp.config(function($routeProvider){
 	}).when('/list',{
 		templateUrl:'views/bookList.html',
 		controller:'BookListController'
-	}).when('/bookForm',{
-		templateUrl:'views/bookForm.html',
-		controller:'BookFormController'
+	}).when('/userInfo',{
+		templateUrl:'views/userInfo.html',
+		controller:'UserInfoController'
+	}).when('/csstest',{
+		templateUrl:'views/csstest.html',
+		controller:'CssTestController'
 	}).otherwise({
 		redirectorTo:'/hello'
 	})
