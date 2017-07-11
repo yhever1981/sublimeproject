@@ -43,16 +43,10 @@ bookStoreCtrls.controller('BookListController', ['$scope',
 bookStoreCtrls.controller('UserListController', ['$scope', '$http','userService',
     function($scope, $http,userService) {
 
-        // console.log('calling the service:');
         // var testresult = testUserService.getUserInfoById(1);
-
         // console.log(testresult);
-
         // console.log('calling the service: successful');
-        // console.log("call service")
-        //  $scope.users  =  userService.getUserList();
-        //  console.log("call service end");
-        //  console.log($scope.users);
+
 
        userService.getUserList()
        .then(

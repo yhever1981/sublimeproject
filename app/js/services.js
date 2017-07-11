@@ -13,9 +13,8 @@ bookStoreServices.service('bookStoreService_2', ['$scope',
 ]);
 
 bookStoreServices.service('userService', ['$http', function($http) {
-    // alert('da');
     var doRequest = function() {
-        console.log("userService .start call ");
+        console.log("userService .start call ..");
         return $http({
             method: 'GET',
             url: '../dummy/userdatadummy.json'
@@ -24,24 +23,6 @@ bookStoreServices.service('userService', ['$http', function($http) {
 
     this.getUserList = function() {
     	return doRequest();
-        // console.log("call getuserlist 1");
-        // return $http({
-        //     method: 'GET',
-        //     url: '../dummy/userdatadummy.json'
-        // }).then(
-        //     function successCallback(response) {
-        //         console.log("success...");
-        //         console.log(response.data);
-        //         console.log("call getuserlist 2");
-        //         return response.data;
-        //     },
-        //     function errorCallback(response) {
-        //         console.log("call getuserlist 3");
-        //         console.log("failed")
-        //             // return {};
-        //     });
-        // console.log("call getuserlist 4");
-        // return {};
     }
 }]);
 
@@ -54,8 +35,3 @@ bookStoreServices.service('testUserService', function() {
     }
 });
 
-// bookStoreServices.factory('userService1', ['$http',
-//     function($http) {
-
-//     }
-// ]);
