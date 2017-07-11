@@ -1,7 +1,7 @@
 
 
 var bookStoreApp = angular.module('bookStoreApp',[
-	'ngRoute','ngAnimate','bookStoreCtrls','bookStoreDirectives','bookStoreFilters',
+	'ngRoute','bookStoreCtrls','bookStoreDirectives','bookStoreFilters',
 	'bookStoreServices'
 	]);
 
@@ -18,6 +18,9 @@ bookStoreApp.config(function($routeProvider){
 	}).when('/csstest',{
 		templateUrl:'views/csstest.html',
 		controller:'CssTestController'
+	}).when('/direct',{
+		templateUrl:'views/direct.html',
+		controller:'DirectController'
 	}).otherwise({
 		redirectorTo:'/hello'
 	})

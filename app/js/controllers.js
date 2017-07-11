@@ -1,5 +1,9 @@
 var bookStoreCtrls = angular.module('bookStoreCtrls', []);
 
+
+/*
+*
+*/
 bookStoreCtrls.controller('HelloController', ['$scope',
     function($scope) {
         {
@@ -77,4 +81,16 @@ bookStoreCtrls.controller('CssTestController', ['$scope', function($scope) {
         $scope.messageText = "this is warning";
     };
 
+}]);
+
+
+bookStoreCtrls.controller('DirectController', ['$scope', function($scope){
+
+    $scope.printData=function(){
+        console.log("loading the date from controller1111111");
+    };
+
+    $scope.printData2=function(){
+        console.log("loading the date from controller2222222222222");
+    }
 }]);
