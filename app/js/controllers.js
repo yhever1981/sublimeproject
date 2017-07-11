@@ -15,6 +15,7 @@ bookStoreCtrls.controller('HelloController', ['$scope',
             $scope.text = "this is the content";
 
             $scope.ctrlFlavor = "BAiwei";
+
         }
     }
 ]);
