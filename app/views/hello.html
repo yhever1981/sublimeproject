@@ -1,7 +1,16 @@
 <p>
-	<span ng-bind="greeting.text"></span> , welcome to Angular
+    <span ng-bind="greeting.text"></span> , welcome to Angular
 </p>
+<div>
+	Ctrl:<input type="text" ng-model="ctrlFlavor"/><BR>
+	Directive:<drink flavor="ctrlFlavor"></drink><BR>
 
-<p>
-	
-</p>
+</div>
+
+
+<div>
+<expander class="expander" expander-title='titleTest'>
+    {{text}}
+</expander>
+
+<div>

@@ -12,6 +12,9 @@ bookStoreApp.config(function($routeProvider){
 	}).when('/list',{
 		templateUrl:'views/bookList.html',
 		controller:'BookListController'
+	}).when('/userList',{
+		templateUrl:'views/userlist.html',
+		controller:'UserListController'
 	}).when('/userInfo',{
 		templateUrl:'views/userInfo.html',
 		controller:'UserInfoController'

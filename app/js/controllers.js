@@ -2,18 +2,28 @@ var bookStoreCtrls = angular.module('bookStoreCtrls', []);
 
 
 /*
-*
-*/
+ * Hellow Controller
+ */
 bookStoreCtrls.controller('HelloController', ['$scope',
     function($scope) {
         {
             $scope.greeting = {
                 text: 'Calvin'
             }
+
+            $scope.titleTest = "click to expend";
+            $scope.text = "this is the content";
+
+            $scope.ctrlFlavor = "BAiwei";
         }
     }
 ]);
 
+
+
+/**
+List Controller
+*/
 
 bookStoreCtrls.controller('BookListController', ['$scope',
     function($scope) {
@@ -25,7 +35,34 @@ bookStoreCtrls.controller('BookListController', ['$scope',
     }
 ]);
 
+/**
+ * user list
+ */
+bookStoreCtrls.controller('UserListController', ['$scope', '$http',
+    function($scope, $http) {
 
+        $http({
+            method: 'GET',
+            url: '../dummy/userdatadummy.json'
+        }).then(
+            function successCallback(data) {
+                console.log("success...");
+                console.log(data);
+                $scope.users = data;
+            },
+            function errorCallback(data) {
+                console.log("failed")
+            });
+        // success(function(data, status, headers, config) {
+        //     console.log("success...");
+        //     console.log(data);
+        //     $scope.users = data;
+        // }).success(function(data, status, headers, config) {
+        //     console.log("error........");
+        // });
+
+    }
+]);
 
 bookStoreCtrls.controller('UserInfoController', ['$scope',
     function($scope) {
@@ -58,6 +95,10 @@ bookStoreCtrls.controller('UserInfoController', ['$scope',
                 };
 
             };
+
+            $scope.save = function() {
+                console.log("save the data");
+            }
         }
     }
 ]);
@@ -84,13 +125,13 @@ bookStoreCtrls.controller('CssTestController', ['$scope', function($scope) {
 }]);
 
 
-bookStoreCtrls.controller('DirectController', ['$scope', function($scope){
+bookStoreCtrls.controller('DirectController', ['$scope', function($scope) {
 
-    $scope.printData=function(){
+    $scope.printData = function() {
         console.log("loading the date from controller1111111");
     };
 
-    $scope.printData2=function(){
+    $scope.printData2 = function() {
         console.log("loading the date from controller2222222222222");
     }
 }]);
