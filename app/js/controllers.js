@@ -36,32 +36,35 @@ bookStoreCtrls.controller('BookListController', ['$scope',
     }
 ]);
 
+
 /**
  * user list
  */
-bookStoreCtrls.controller('UserListController', ['$scope', '$http',
-    function($scope, $http) {
+bookStoreCtrls.controller('UserListController', ['$scope', '$http','userService',
+    function($scope, $http,userService) {
 
-        $http({
-            method: 'GET',
-            url: '../dummy/userdatadummy.json'
-        }).then(
-            function successCallback(data) {
+        // console.log('calling the service:');
+        // var testresult = testUserService.getUserInfoById(1);
+
+        // console.log(testresult);
+
+        // console.log('calling the service: successful');
+        // console.log("call service")
+        //  $scope.users  =  userService.getUserList();
+        //  console.log("call service end");
+        //  console.log($scope.users);
+
+       userService.getUserList()
+       .then(
+            function successCallback(response) {
                 console.log("success...");
-                console.log(data);
-                $scope.users = data;
+                console.log(response.data);
+                $scope.users = response.data;
             },
-            function errorCallback(data) {
+            function errorCallback(response) {
                 console.log("failed")
-            });
-        // success(function(data, status, headers, config) {
-        //     console.log("success...");
-        //     console.log(data);
-        //     $scope.users = data;
-        // }).success(function(data, status, headers, config) {
-        //     console.log("error........");
-        // });
-
+            }
+        );
     }
 ]);
 

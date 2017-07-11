@@ -1,6 +1,4 @@
-{
-    "users": [{ "name": "calvin", "title": "bookd1" },
-        { "name": "calvin2", "title": "bookd2" },
-        { "name": "calvin3", "title": "bookd3" }
-    ]
-}
+[{ "name": "calvin11", "title": "bookd1" },
+    { "name": "calvin22", "title": "bookd2" },
+    { "name": "calvin33", "title": "bookd3" }
+]
